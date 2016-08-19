@@ -25,6 +25,15 @@ if(CMAKE_COMPILER_IS_GNUCXX)
 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-unknown-pragmas") # Code uses #pragma mark
 endif()
 
+# Detect available C++ language, library, and compiler features
+include(WriteCompilerDetectionHeader)
+write_compiler_detection_header(
+	FILE "${CMAKE_CURRENT_SOURCE_DIR}/docopt_config.h"
+	PREFIX DOCOPT
+	COMPILERS GNU Clang AppleClang MSVC
+	FEATURES cxx_override cxx_noexcept
+)
+
 #============================================================================
 # Sources & headers
 #============================================================================

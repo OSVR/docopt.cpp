@@ -30,3 +30,5 @@ docopt-config-version.cmake
 
 # Files configured by CMake
 run_tests
+docopt_config.h
+

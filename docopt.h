@@ -9,6 +9,7 @@
 #ifndef docopt__docopt_h_
 #define docopt__docopt_h_
 
+#include "docopt_config.h"
 #include "docopt_value.h"
 
 #include <map>
@@ -65,7 +66,7 @@ namespace docopt {
 					    std::vector<std::string> const& argv,
 					    bool help = true,
 					    std::string const& version = {},
-					    bool options_first = false) noexcept;
+					    bool options_first = false) DOCOPT_NOEXCEPT;
 }
 
 #ifdef DOCOPT_HEADER_ONLY

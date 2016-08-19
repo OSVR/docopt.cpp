@@ -662,7 +662,7 @@ docopt::docopt(std::string const& doc,
 	       std::vector<std::string> const& argv,
 	       bool help,
 	       std::string const& version,
-	       bool options_first) noexcept
+	       bool options_first) DOCOPT_NOEXCEPT
 {
 	try {
 		return docopt_parse(doc, argv, help, !version.empty(), options_first);
